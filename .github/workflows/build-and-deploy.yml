@@ -1,10 +1,12 @@
 name: Build and deploy native image
-on:
+
+on: 
+  workflow_dispatch:
   push:
     branches:
       - spring-boot-3
 env:
-  FUNCTION_NAME: judubois-native
+  FUNCTION_NAME: ${{ secrets.AZ_FUNCTION_NAME_APP }}
 
 jobs:
   build-native:
@@ -17,7 +19,7 @@ jobs:
           version: 'latest'
           java-version: '19'
           components: 'native-image'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          #github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Spring Boot Function with GraalVM
         run: |
           ./mvnw -Pnative native:compile
