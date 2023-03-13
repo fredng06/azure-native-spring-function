@@ -4,5 +4,10 @@
         "description": {
             "defaultExecutablePath": "/home/site/wwwroot/spring-native-image"
         }
+    },
+    "logging": {
+        "logLevel": {
+            "default": "Trace"
+        }
     }
 }
