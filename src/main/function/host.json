@@ -1,8 +1,12 @@
 {
     "version": "2.0",
-    "httpWorker": {
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle",
+        "version": "[4.0.0, 5.0.0)"
+    },
+    "customHandler": {
         "description": {
-            "defaultExecutablePath": "/home/site/wwwroot/spring-native-image"
+            "defaultExecutablePath": "spring-native-image"
         }
     },
     "logging": {
